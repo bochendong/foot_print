@@ -1,0 +1,130 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+
+$ruler: 16px;
+$color-red: #ae1100;
+// $color-bg: #ebecf0;
+$color-bg: white;
+
+$color-shadow: #a1a6b6;
+$color-white: #fff;
+
+.upload {
+  @include page-padding;
+
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2044837-jpeg.jpg")
+    &__image {
+    width: 100%;
+  }
+
+  &__input-container {
+    width: 100%;
+    margin-bottom: 24px;
+
+    @include tablet {
+      width: 50%;
+      margin: 0 8px;
+      min-height: 100%;
+    }
+  }
+
+  &__file-container {
+    border: 0;
+    outline: 0;
+    font-size: $ruler;
+    border-radius: $ruler * 20;
+    padding: $ruler;
+    background-color: $button-blue;
+    // text-shadow: 1px 1px 0 $color-white;
+    // font-family: "Montserrat", sans-serif;
+    letter-spacing: -0.2px;
+    font-size: $ruler;
+    // color: $color-red;
+    color: white;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px $color-white, 5px 5px 20px $color-shadow;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    // font-weight: 600;
+    font-weight: 400;
+    display: block;
+    width: 35%;
+    margin-top: 45px;
+    margin-right: 0px;
+
+    &:hover {
+      box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+    }
+
+    &:active {
+      box-shadow: inset 1px 1px 2px $color-shadow,
+        inset -1px -1px 2px $color-white;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    margin-top: 16px;
+    border-radius: 24px;
+  }
+}
+
+html {
+  background-color: #ebecf0;
+}
+
+.signinLabel {
+  display: block;
+  margin-bottom: $ruler * 1.5;
+  width: 100%;
+}
+
+.signinform {
+  padding: $ruler;
+  box-sizing: border-box;
+  width: 100%;
+
+  &--upload {
+    @include tablet {
+      display: flex;
+      align-items: stretch;
+    }
+  }
+}
+
+.segment {
+  padding: $ruler * 2 0;
+  text-align: center;
+  // color: $color-shadow;
+  color: $black;
+}
+
+.uploadTextarea {
+  font-family: inherit;
+  // font-family: "Montserrat", sans-serif;
+  letter-spacing: -0.2px;
+  font-size: $ruler;
+  border: 0;
+  outline: 0;
+  font-size: $ruler;
+  border-radius: $ruler * 2;
+  padding: 16px 24px;
+  background-color: $color-bg;
+  // text-shadow: 1px 1px 0 $color-white;
+  margin-right: $ruler/2;
+  box-shadow: inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-white;
+  width: 100%;
+  resize: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+  &:focus {
+    box-shadow: inset 1px 1px 2px $color-shadow;
+  }
+
+  &::placeholder {
+    color: $color-shadow;
+  }
+}

@@ -1,0 +1,26 @@
+***** post (image) *****
+get /post/:id               finished   
+post /post                  finished        
+delete /post/:id            finished    
+put /post/:id               最后在写
+
+
+***** user ***** 
+get /user/:id
+post /user/signup           finished     
+post /user/signin           finished     
+put /user/:id               最后在写
+
+
+***** search ***** 
+get /search => {
+                locations: [location, location, location, location], 
+                users: [user, user, user, user]
+                }          finished     
+// limited information
+
+
+***** location ***** 
+get /location/:city         finished  
+
+
